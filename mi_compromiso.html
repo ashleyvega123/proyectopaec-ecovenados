@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Compromiso con el Reciclaje | ECO-VENADOS</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            background-color: #f8f9fa;
+            padding: 20px;
+            max-width: 720px;
+            margin: 0 auto;
+        }
+        .caja-titulo {
+            background-color: #556B2F;
+            color: white;
+            text-align: center;
+            padding: 18px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+        .formulario {
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+        .campo {
+            margin-bottom: 22px;
+        }
+        label {
+            display: block;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 8px;
+        }
+        input[type="text"], input[type="number"], textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 15px;
+        }
+        textarea {
+            resize: vertical;
+            min-height: 90px;
+        }
+        .opcion {
+            margin: 8px 0;
+            padding-left: 5px;
+        }
+        .reto {
+            background-color: #f0f4e8;
+            border: 2px solid #556B2F;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 30px 0;
+        }
+        .reto h3 {
+            color: #556B2F;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        .reto p {
+            text-align: center;
+            margin-bottom: 15px;
+        }
+        .contenedor-juego {
+            display: grid;
+            grid-template-columns: repeat(4, 90px);
+            gap: 10px;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        .tarjeta {
+            width: 90px;
+            height: 90px;
+            position: relative;
+            cursor: pointer;
+        }
+        .cara {
+            width: 100%;
+            height: 100%;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            backface-visibility: hidden;
+            transition: transform 0.4s ease;
+            overflow: hidden;
+        }
+        .atras {
+            background-color: #556B2F;
+            color: white;
+            font-size: 30px;
+        }
+        .frente {
+            background-color: white;
+            border: 3px solid #556B2F;
+            transform: rotateY(180deg);
+        }
+        .frente img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .tarjeta.volteada .atras {
+            transform: rotateY(180deg);
+        }
+        .tarjeta.volteada .frente {
+            transform: rotateY(0deg);
+        }
+        .tarjeta.encontrada {
+            opacity: 0.7;
+            pointer-events: none;
+        }
+        .boton-enviar {
+            background-color: #556B2F;
+            color: white;
+            border: none;
+            padding: 14px 35px;
+            font-size: 17px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+            width: 100%;
+        }
+        .boton-enviar:hover {
+            background-color: #6b7f3f;
+        }
+        .boton-reiniciar {
+            background-color: #6b7f3f;
+            color: white;
+            border: none;
+            padding: 10px 25px;
+            font-size: 15px;
+            border-radius: 6px;
+            cursor: pointer;
+            display: block;
+            margin: 0 auto 15px;
+        }
+        .contenedor-inferior {
+            text-align: center;
+            margin-top: 25px;
+        }
+        .boton {
+            display: inline-block;
+            background-color: #556B2F;
+            color: white;
+            text-decoration: none;
+            padding: 12px 25px;
+            border-radius: 8px;
+            margin: 0 8px;
+            font-weight: bold;
+        }
+        .boton-finalizar {
+            background-color: #6b7f3f;
+            border: 2px solid #556B2F;
+        }
+        .mensaje {
+            text-align: center;
+            font-weight: bold;
+            color: #556B2F;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="caja-titulo">
+        <h1>MI COMPROMISO CON EL RECICLAJE</h1>
+    </div>
+
+    <form class="formulario" action="procesar_compromiso.php" method="post">
+        
+        <div class="campo">
+            <label>1. Nombre completo:</label>
+            <input type="text" name="nombre" placeholder="Escribe tu nombre completo" required>
+        </div>
+
+        <div class="campo">
+            <label>2. Edad:</label>
+            <input type="number" name="edad" placeholder="Tu edad" min="5" max="100" required>
+        </div>
+
+        <div class="campo">
+            <label>3. Grupo:</label>
+            <input type="text" name="grupo" placeholder="Ejemplo: 2° A" required>
+        </div>
+
+        <div class="campo">
+            <label>4. Residuo que generas con mayor frecuencia:</label>
+            <input type="text" name="residuo_frecuente" placeholder="Ejemplo: Plástico, papel, restos de comida..." required>
+        </div>
+
+        <div class="campo">
+            <label>5. ¿Separas tus residuos?</label>
+            <div class="opcion">
+                <input type="radio" name="separas_residuos" value="Sí" id="si" required>
+                <label for="si">Sí</label>
+            </div>
+            <div class="opcion">
+                <input type="radio" name="separas_residuos" value="No" id="no">
+                <label for="no">No</label>
+            </div>
+            <div class="opcion">
+                <input type="radio" name="separas_residuos" value="Algunas veces" id="aveces">
+                <label for="aveces">Algunas veces</label>
+            </div>
+        </div>
+
+        <div class="campo">
+            <label>6. ¿Qué acción realizas para cuidar el ambiente?</label>
+            <textarea name="accion_ambiental" placeholder="Escribe qué haces para ayudar al medio ambiente..." required></textarea>
+        </div>
+
+        <div class="campo">
+            <label>7. Selecciona tu compromiso:</label>
+            <div class="opcion">
+                <input type="radio" name="compromiso" value="Reducir el uso de plástico" id="c1" required>
+                <label for="c1">Reducir el uso de plástico</label>
+            </div>
+            <div class="opcion">
+                <input type="radio" name="compromiso" value="Separar residuos" id="c2">
+                <label for="c2">Separar residuos</label>
+            </div>
+            <div class="opcion">
+                <input type="radio" name="compromiso" value="Reutilizar materiales" id="c3">
+                <label for="c3">Reutilizar materiales</label>
+            </div>
+            <div class="opcion">
+                <input type="radio" name="compromiso" value="Participar en campañas" id="c4">
+                <label for="c4">Participar en campañas</label>
+            </div>
+            <div class="opcion">
+                <input type="radio" name="compromiso" value="Reciclar aparatos electrónicos" id="c5">
+                <label for="c5">Reciclar aparatos electrónicos</label>
+            </div>
+        </div>
+
+        <div class="campo">
+            <label>8. Comentario o propuesta:</label>
+            <textarea name="comentario" placeholder="Escribe aquí tu comentario o propuesta para mejorar el reciclaje en tu comunidad..." required></textarea>
+        </div>
+
+        <div class="reto">
+            <h3>RETO DIDÁCTICO: ¡Encuentra las parejas!</h3>
+            <p>Encuentra las parejas de imágenes relacionadas con el reciclaje antes de enviar tu compromiso.</p>
+            
+            <div class="mensaje" id="mensaje">¡Buena suerte!</div>
+            <button type="button" class="boton-reiniciar" onclick="reiniciarJuego()">Reiniciar</button>
+            
+            <div class="contenedor-juego" id="tablero"></div>
+        </div>
+
+        <button type="submit" class="boton-enviar"> Enviar mi compromiso</button>
+    </form>
+
+    <div class="contenedor-inferior">
+        <a href="indice.html" class="boton">Volver al Índice</a>
+        <a href="proyectopaec.html" class="boton boton-finalizar">Continuar</a>
+    </div>
+
+<script>
+const imagenes = [
+    'foto1m.jpg.jpeg',
+    'foto2m.jpg.jpeg',
+    'foto3m.jpg.jpeg',
+    'foto4m.jpg.jpeg',
+    'foto5m.jpg.jpeg',
+    'foto6m.jpg.jpeg',
+    'foto7m.jpg.jpeg',
+    'foto8m.jpg.jpeg'
+];
+
+let tarjetas = [...imagenes, ...imagenes];
+let tarjetaVolteada = null;
+let bloqueado = false;
+let parejasEncontradas = 0;
+
+function mezclar(array) {
+    return array.sort(() => Math.random() - 0.5);
+}
+
+function crearTablero() {
+    const tablero = document.getElementById('tablero');
+    tablero.innerHTML = '';
+    mezclar(tarjetas);
+    
+    tarjetas.forEach((img) => {
+        const tarjeta = document.createElement('div');
+        tarjeta.className = 'tarjeta';
+        tarjeta.dataset.imagen = img;
+        tarjeta.innerHTML = `
+            <div class="cara atras">❓</div>
+            <div class="cara frente"><img src="${img}" alt="Imagen"></div>
+        `;
+        tarjeta.addEventListener('click', () => voltearTarjeta(tarjeta));
+        tablero.appendChild(tarjeta);
+    });
+}
+
+function voltearTarjeta(tarjeta) {
+    if (bloqueado || tarjeta.classList.contains('volteada') || tarjeta.classList.contains('encontrada')) return;
+    tarjeta.classList.add('volteada');
+    if (!tarjetaVolteada) {
+        tarjetaVolteada = tarjeta;
+    } else {
+        verificarPareja(tarjeta, tarjetaVolteada);
+    }
+}
+
+function verificarPareja(tarjeta1, tarjeta2) {
+    bloqueado = true;
+    if (tarjeta1.dataset.imagen === tarjeta2.dataset.imagen) {
+        tarjeta1.classList.add('encontrada');
+        tarjeta2.classList.add('encontrada');
+        parejasEncontradas++;
+        tarjetaVolteada = null;
+        bloqueado = false;
+        if (parejasEncontradas === 8) {
+            document.getElementById('mensaje').textContent = '🎉 ¡Felicidades! Completaste el reto.';
+        }
+    } else {
+        setTimeout(() => {
+            tarjeta1.classList.remove('volteada');
+            tarjeta2.classList.remove('volteada');
+            tarjetaVolteada = null;
+            bloqueado = false;
+        }, 1000);
+    }
+}
+
+function reiniciarJuego() {
+    parejasEncontradas = 0;
+    tarjetaVolteada = null;
+    bloqueado = false;
+    document.getElementById('mensaje').textContent = '¡Buena suerte!';
+    crearTablero();
+}
+
+crearTablero();
+</script>
+</body>
+</html>

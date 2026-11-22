@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portada ECO-VENADOS</title>
+<style>
+*{
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+font-family: Arial, sans-serif;
+}
+
+body{
+margin: 0;
+padding: 0;
+color: #ffffff;
+}
+
+.fondo-portada{
+width: 100%;
+min-height: 100vh;
+background-image: url("fotoportada.jpg.jpeg");
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+display: flex;
+justify-content: center;
+align-items: center;
+padding: 20px;
+background-color: #ffffff;
+}
+
+.cuadro-verde{
+background-color: #556B2F;
+padding: 32px 24px;
+width: 92%;
+max-width: 480px;
+border-radius: 16px;
+text-align: center;
+}
+
+.titulo{
+font-size: 34px;
+font-weight: bold;
+margin-bottom: 10px;
+}
+
+.subtitulo{
+font-size: 20px;
+margin-bottom: 20px;
+}
+
+.logo-chico{
+width: 105px;
+height: 105px;
+border-radius: 12px;
+object-fit: cover;
+margin-bottom: 28px;
+}
+
+.nombres{
+font-size: 17px;
+margin-bottom: 12px;
+}
+
+.grupo{
+font-size: 17px;
+margin-bottom: 35px;
+}
+
+.boton-empezar{
+display: inline-block;
+padding: 13px 28px;
+border-radius: 12px;
+background-color: #556B2F;
+color: hsl(0, 0%, 89%);
+text-decoration: none;
+font-weight: bold;
+font-size: 19px;
+transition: 0.3s;
+}
+
+.boton-empezar:hover{
+transform: scale(1.05);
+}
+
+@media(max-width: 650px){
+.titulo{
+font-size: 26px;
+}
+.subtitulo{
+font-size: 16px;
+}
+.logo-chico{
+width: 85px;
+height: 85px;
+}
+.cuadro-verde{
+padding: 24px 18px;
+}
+}
+</style>
+</head>
+<body>
+
+<div class="fondo-portada">
+  <div class="cuadro-verde">
+    <h1 class="titulo">ECO-VENADOS</h1>
+    <h2 class="subtitulo">Transformando el entorno</h2>
+
+    <img class="logo-chico" src="logo.png.jpeg" alt="Logo ECO-VENADOS">
+
+    <p class="nombres">Ashley Vega/Paola Ayala Murillo</p>
+    <p class="grupo">5:G</p>
+
+    <a class="boton-empezar" href="introduccion.html">EMPEZAR</a>
+  </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problema Ambiental | ECO‑VENADOS</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            background-color: #f8f9fa;
+            padding: 20px;
+        }
+        .caja-titulo {
+            background-color: #556B2F;
+            color: white;
+            text-align: center;
+            padding: 18px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        .foto-larga-inicio{
+            width:70%;
+            height:auto;
+            border-radius:10px;
+            margin-bottom:30px;
+        }
+        .seccion-concepto {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 25px;
+        }
+        .subtitulo-barra {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 15px;
+        }
+        .barrita {
+            width: 6px;
+            height: 28px;
+            background-color: #556B2F;
+        }
+        h2 {
+            color: #333;
+        }
+        .texto-descripcion {
+            font-size: 17px;
+            line-height: 1.75;
+            margin-bottom: 15px;
+        }
+        .contenedor-cuatro-fotos{
+            display:grid;
+            grid-template-columns: 1fr 1fr;
+            gap:15px;
+            margin:20px 0;
+        }
+        .contenedor-tres-fotos{
+            display:grid;
+            grid-template-columns: 1fr 1fr;
+            gap:15px;
+            margin:20px 0;
+        }
+        .foto-centrada{
+            grid-column: 1 / -1;
+            max-width: 60%;
+            margin: 0 auto;
+        }
+        .contenedor-dos-fotos{
+            display:grid;
+            grid-template-columns: 1fr 1fr;
+            gap:15px;
+            margin:20px 0;
+        }
+        .contenedor-cuatro-fotos img, .contenedor-tres-fotos img, .contenedor-dos-fotos img{
+            width:50%;
+            height:auto;
+            border-radius:8px;
+        }
+        @media (max-width:600px){
+            .contenedor-cuatro-fotos, .contenedor-tres-fotos, .contenedor-dos-fotos{
+                grid-template-columns:1fr;
+            }
+            .foto-centrada{
+                max-width:100%;
+            }
+        }
+        .contenedor-boton {
+            text-align: center;
+            margin-top: 30px;
+        }
+        .boton-volver {
+            display: inline-block;
+            background-color: #556B2F;
+            color: white;
+            padding: 12px 22px;
+            border-radius: 8px;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="caja-titulo">
+        <h1>PROBLEMA AMBIENTAL</h1>
+    </div>
+
+    <img class="foto-larga-inicio" src="foto_larga.jpg.jpeg" alt="Problema ambiental contaminación">
+
+    <div>
+        <div class="seccion-concepto">
+            <div class="subtitulo-barra">
+                <span class="barrita"></span>
+                <h2>¿Qué es un problema ambiental?</h2>
+            </div>
+            <p class="texto-descripcion">
+                Un problema ambiental es cualquier alteración negativa que afecta el equilibrio natural del medio ambiente, generada tanto por causas naturales como, en su mayoría, por las actividades humanas. La intervención constante del ser humano sobre los recursos naturales ha modificado los ciclos naturales de la tierra, provocando daños que afectan la flora, la fauna, el agua, el suelo y el aire. A diferencia de fenómenos naturales como tormentas o sequías, la mayoría de los problemas ambientales actuales tienen un origen antropogénico, es decir, derivan de la contaminación, la sobreexplotación de recursos, la deforestación, la acumulación de residuos y el cambio climático. Reconocer la existencia de estos problemas es el primer paso para buscar soluciones sostenibles y reducir el impacto negativo que generamos en nuestro entorno.
+            </p>
+        </div>
+
+        <div class="seccion-concepto">
+            <div class="subtitulo-barra">
+                <span class="barrita"></span>
+                <h2>Principales causas de los problemas ambientales</h2>
+            </div>
+            <p class="texto-descripcion">
+                Una de las causas más importantes es la contaminación, que se divide en contaminación atmosférica, hídrica, del suelo y acústica. La contaminación del aire se produce por emisiones de vehículos, industrias y quema de residuos; la contaminación del agua surge por vertidos de basura, desechos industriales y aguas residuales sin tratar; mientras que la contaminación del suelo aparece al depositar residuos sólidos o sustancias químicas sobre la tierra. Otra causa fundamental es la deforestación, ya que al talar árboles se pierden hábitats naturales, se reduce la absorción de dióxido de carbono y se favorece la erosión del suelo. También influyen la sobreexplotación de recursos naturales, el crecimiento desordenado de las ciudades y el consumo excesivo de productos de un solo uso.
+            </p>
+        </div>
+
+        <div class="seccion-concepto">
+            <div class="subtitulo-barra">
+                <span class="barrita"></span>
+                <h2>¿Qué sucede cuando tiramos la basura incorrectamente?</h2>
+            </div>
+            <p class="texto-descripcion">
+                Cuando tiramos la basura de forma incorrecta se desencadena una gran cantidad de daños para todo el ecosistema. Primero, los residuos se mezclan y contaminan el suelo, impidiendo el crecimiento de plantas y filtrando sustancias tóxicas hacia las capas subterráneas del agua. El agua contaminada llega a ríos, lagos y océanos, afectando gravemente a peces y demás animales acuáticos, muchos de los cuales pueden morir o acumular veneno en su organismo. Además, la basura mal depositada genera malos olores, atrae roedores, moscas y bacterias, aumentando la probabilidad de enfermedades en las personas. También se dificulta el proceso de reciclaje, ya que un solo residuo mal colocado puede arruinar todo un lote de materiales reciclables. En temporadas de lluvia, la basura obstruye alcantarillas y canales, provocando inundaciones que afectan viviendas y comunidades enteras.
+            </p>
+            <div class="contenedor-cuatro-fotos">
+                <img src="foto1_basurapr.jpg.jpeg.jpeg" alt="Basura mal depositada">
+                <img src="foto2_basurapr.jpg.jpeg.jpeg" alt="Contaminación por residuos">
+                <img src="foto3_basurapr.jpg.jpeg.jpeg" alt="Basura en ríos">
+                <img src="foto4_basurapr.jpg.jpeg.jpeg" alt="Separación correcta">
+            </div>
+        </div>
+
+        
+        <div class="seccion-concepto">
+            <div class="subtitulo-barra">
+                <span class="barrita"></span>
+                <h2>Consecuencias para el medio ambiente y la sociedad</h2>
+            </div>
+            <p class="texto-descripcion">
+                Las consecuencias de los problemas ambientales son muy amplias y afectan directamente a todos los seres vivos. En el medio ambiente se produce la pérdida de biodiversidad, la extinción de especies, la desertificación, la alteración de ciclos hidrológicos y el aumento del efecto invernadero. Para la sociedad humana, estas alteraciones generan enfermedades respiratorias, cutáneas y digestivas, escasez de agua potable, desastres naturales más frecuentes y afectaciones económicas por daños a cultivos y viviendas. Los grupos más vulnerables suelen ser los primeros en sufrir estos efectos, ya que muchas veces no cuentan con recursos para adaptarse a los cambios generados por la degradación ambiental. Por ello, es indispensable actuar de forma inmediata para mitigar dichas consecuencias.
+            </p>
+            <div class="contenedor-tres-fotos">
+                <img src="foto1_consecuencias.jpg.jpeg" alt="Consecuencia contaminación">
+                <img src="foto2_consecuencias.jpg.jpeg" alt="Pérdida biodiversidad">
+                <img src="foto3_consecuencias.jpg.jpeg" alt="Enfermedades por contaminación">
+            </div>
+        </div>
+
+        
+        <div class="seccion-concepto">
+            <div class="subtitulo-barra">
+                <span class="barrita"></span>
+                <h2>Soluciones y acciones para reducir el problema ambiental</h2>
+            </div>
+            <p class="texto-descripcion">
+                Existen múltiples soluciones que pueden aplicarse desde diferentes niveles: gubernamental, comunitario e individual. A nivel gubernamental se requieren leyes ambientales estrictas, control a las industrias contaminantes y programas de reforestación. A nivel comunitario se pueden organizar jornadas de limpieza, talleres de educación ambiental y campañas de separación de residuos. A nivel individual, cada persona puede contribuir reduciendo el consumo de plástico, ahorrando agua y energía, reutilizando objetos, reciclando correctamente y evitando la quema de basura. La combinación de todas estas acciones permite disminuir la gravedad de los problemas ambientales y construir un entorno más sano y sostenible para las próximas generaciones.
+            </p>
+            <div class="contenedor-dos-fotos">
+                <img src="foto1_soluciones.jpg.jpeg" alt="Reforestación">
+                <img src="foto2_soluciones.jpg.jpeg" alt="Jornada limpieza comunitaria">
+            </div>
+        </div>
+    </div>
+
+    <div class="contenedor-boton">
+        <a href="indice.html" class="boton-volver">Volver al Índice</a>
+    </div>
+</body>
+</html>
