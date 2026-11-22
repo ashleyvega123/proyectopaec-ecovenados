@@ -83,7 +83,7 @@
         echo "<p><strong>Residuo que generas más:</strong> $residuo</p>";
         echo "<p><strong>¿Separas tus residuos?</strong> $separas</p>";
         echo "<p><strong>Acción que realizas:</strong> $accion</p>";
-        echo "<p style='font-size:19px; color:#556B2F; font-weight:bold;'>🎯 Tu compromiso: $compromiso</p>";
+        echo "<p style='font-size:19px; color:#556B2F; font-weight:bold;'>Tu compromiso: $compromiso</p>";
         echo "<p><strong>Tu propuesta:</strong> $comentario</p>";
         echo "<p style='margin-top:20px; font-weight:bold; color:#556B2F;'>¡Gracias por cuidar el medio ambiente con nosotros!</p>";
         ?>
