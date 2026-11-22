@@ -299,7 +299,7 @@ function crearTablero() {
         tarjeta.className = 'tarjeta';
         tarjeta.dataset.imagen = img;
         tarjeta.innerHTML = `
-            <div class="cara atras">❓</div>
+            <div class="cara atras"></div>
             <div class="cara frente"><img src="${img}" alt="Imagen"></div>
         `;
         tarjeta.addEventListener('click', () => voltearTarjeta(tarjeta));
