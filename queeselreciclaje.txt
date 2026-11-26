@@ -124,7 +124,7 @@ font-size:24px;
 El reciclaje se define como el proceso mediante el cual recolectamos materiales que ya cumplieron su vida útil para transformarlos en nuevos productos, evitando que se conviertan en basura desechada en vertederos, ríos, calles o suelos contaminados. Es una de las bases de la economía circular y forma parte fundamental de la regla de las tres R: Reducir, Reutilizar y Reciclar. A diferencia de simplemente tirar los residuos, el reciclaje implica separar correctamente cada material, transportarlo hacia plantas especializadas y realizar tratamientos físicos, químicos o biológicos para regenerar la materia prima y volverla a utilizar en la fabricación de artículos nuevos. Los materiales más frecuentes que se pueden reciclar son el papel, el cartón, el vidrio, el aluminio, otros metales, algunos plásticos, textiles y residuos orgánicos como los restos de comida para elaborar compostaje.
   </p>
 
-  <!-- ESPACIO PARA IMAGEN 2 -->
+  
   <div class="imagen-contenido">
     <p>Imagen 2: Separación correcta de residuos</p>
     <!-- <img src="reciclaje2.jpg" alt="Separación de residuos"> -->
@@ -136,7 +136,7 @@ La importancia del reciclaje radica en que protege el medio ambiente, reduce el 
   </p>
 </div>
 
-<!-- BOTÓN VOLVER AL ÍNDICE (VERDE‑OLIVA) -->
+
 <div class="contenedor-boton">
   <a class="boton-volver" href="indice.html">Volver al índice</a>
 </div>
